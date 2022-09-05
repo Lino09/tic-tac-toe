@@ -26,6 +26,11 @@ const LoginModal = (props: {user: Gamer; closeModal: () => void; setUserInfo: (e
               {Object.keys(user).map((field: string) => (
                 <Input id={field} value={user} onChangeProp={setUserInfo}  key={field} label={field} register={register}/>
               ))}
+              
+              <label htmlFor="rememberme" className='flex gap-4 items-center'>
+                <input type="checkbox" name="rememberme" id="rememberme" className='h-4 w-4' />
+                <span>Remember me</span>
+              </label>
 
               <button
                 type="button"
@@ -34,8 +39,8 @@ const LoginModal = (props: {user: Gamer; closeModal: () => void; setUserInfo: (e
               >{`or ${register ? 'Log in' : 'Register'}`}</button>
 
               <div className='flex w-full justify-center gap-4'>
-                <button className='btn-base btn-cta border-base'>{`${register ? 'Register' : 'Log in'}`}</button>
-                <button className='btn-base btn-secondary border-base'>Play as guest</button>
+                <button type="button" className='btn-base btn-cta border-base'>{`${register ? 'Register' : 'Log in'}`}</button>
+                <button type="button" className='btn-base btn-secondary border-base'>Play as guest</button>
               </div>
             </form>
           </div>

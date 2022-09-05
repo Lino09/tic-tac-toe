@@ -1,5 +1,5 @@
 import TicTacButton from './TicTacButton'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const Game = (): JSX.Element => {
   const [game, gameSet] = useState(new Array(9).fill(null))
@@ -14,14 +14,6 @@ const Game = (): JSX.Element => {
     newGame[slot] = 'X'
     gameSet(newGame)
   }
-
-
-  useEffect(()=>{
-    window.addEventListener('copy',(event) => {
-      event.preventDefault()
-      navigator.clipboard.writeText('Soy bien joto y me gusta la pilinga :v baile del troleo')
-    })
-  },[])
 
   return (
     <section className="section">
