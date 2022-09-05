@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-base {
+    @apply bg-slate-200 font-medium text-slate-700 dark:bg-slate-700 dark:text-slate-200 dark:border-slate-200 border-slate-700;
+  }
+
+  .moon {
+    @apply top-0.5 -left-0.5 bg-slate-900 absolute transition-all duration-300 rounded-full;
+  }
+
+  .sun {
+    @apply h-5 w-5 absolute rounded-full top-1.5 transform duration-500 transition-transform;
+  }
+  .slot {
+    @apply h-24 w-24 lg:w-32 lg:h-32 text-4xl lg:text-7xl dark:border-slate-200 border-slate-700;
+  }
+
+  .big-container {
+    @apply w-full flex justify-center;
+  }
+
+  .responsive {
+    @apply w-full max-w-7xl px-8;
+  }
+
+  .section {
+    @apply flex w-full items-center flex-col;
+  }
+  
+  .border-base {
+    @apply dark:border-slate-200 border-slate-700;
+  }
+
+  .btn-base {
+    @apply border py-2 px-4 rounded
+  }
+  .btn-cta {
+    @apply dark:bg-indigo-700 dark:hover:bg-indigo-800 bg-indigo-500 text-white hover:bg-indigo-600
+  }
+  .btn-secondary {
+    @apply hover:bg-slate-100 dark:hover:bg-slate-800
+  }
+  .base-input {
+  @apply w-full rounded-md p-1 bg-base focus:outline-none
+  }
+
+  .base-input-label {
+  @apply absolute text-xs uppercase bg-base -top-2 px-2 left-4
+  }
+
+  .base-label {
+  @apply border relative border-base p-1 rounded-md
+  }
+
+  .base-modal-wrapper {
+  @apply fixed top-0 left-0 w-screen h-screen flex justify-center items-center backdrop-blur-sm dark:bg-white bg-slate-700 dark:bg-opacity-10 bg-opacity-30 
+  }
+
+  .base-modal {
+  @apply w-full max-w-sm bg-base border flex flex-col space-y-8 items-center px-8 pb-8 rounded-lg relative
+  }
+  
+  
+}
